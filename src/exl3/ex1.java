@@ -1,6 +1,5 @@
 package exl3;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ex1 {
@@ -10,26 +9,26 @@ public class ex1 {
 	public static void main(String[] args) {
 
 		/* EX1a */
-		System.out.println("Inserisci stringa: (true=pari)");
+		System.out.printf("Inserisci stringa: (true=pari)");
 		String stringanuova = scan.nextLine();
 		System.out.println(stringaPariDispari(stringanuova));
 
 		/* EX1b */
-		System.out.println("Inserisci anno: (true=bisest)");
+		System.out.printf("Inserisci anno: (true=bisest)");
 		int annonuovo = scan.nextInt();
 		System.out.println(annoBisestile(annonuovo));
 
 		/* EX2 */
-		System.out.println("Inserisci un numero da 0 a 3:");
+		System.out.printf("Inserisci un numero da 0 a 3:");
 		int numero = scan.nextInt();
 		System.out.println(testswitch(numero));
 
 		/* EX3 */
-		System.out.println("Inserisci una stringa: (:q to quit)");
+		System.out.printf("Inserisci una stringa: (:q to quit)");
 		splittastringa();
 
 		/* EX4 */
-		System.out.println("Inserisci un numero basso possibilmente:");
+		System.out.printf("Inserisci un numero basso possibilmente:");
 		int cd = scan.nextInt();
 		contoRovescia(cd);
 	}
@@ -71,7 +70,7 @@ public class ex1 {
 
 	public static void splittastringa() {
 		String stringawhile = "";
-		while (stringawhile != ":q") {
+		while (!stringawhile.equals(":q")) {
 			stringawhile = scan.nextLine();
 			String[] parts = stringawhile.split("");
 			for (int i = 0; i < parts.length; i++) {
